@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css"
+      integrity="sha512-2SwdPD6INVrV/lHTZbO2nodKhrnDdJK9/kg2XD1r9uGqPo1cUbujc+IYdlYdEErWNu69gVcYgdxlmVmzTWnetw=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+    <link rel="stylesheet" href="/styles/global.css" />
+    <link rel="stylesheet" href="/styles/mensa.css" />
+    <title>Adicionar Banner</title>
+  </head>
+  <body>
+    <div class="container">
+      <main class="main-content" style="padding: 15px 35px">
+        <div id="content-passo1" class="code-content active">
+          <h2>Adicionar Banner no site</h2>
+          <!-- <input type="text" value="?cache=clear" readonly> -->
+          <p class="message-display">
+            <i class="fa-solid fa-angle-right"></i>
+            1 - Para adicionar um banner, basta seguir o seguinte passo a
+            passo: Clique em "Editar", para abrir o painel de edição
+            <br />
+            <img
+              src="../src/imgTuto/addBanner/01.png"
+              alt=""
+              style="margin-top: 12px; margin-left: 12px; border-radius: 8px"
+            />
+          </p>
+          <p class="message-display">
+            <i class="fa-solid fa-angle-right"></i> 
+            Depois clique em "Banners"<br />
+            <img
+              src="../src/imgTuto/addBanner/02.png"
+              alt=""
+              style="margin-top: 12px; margin-left: 12px; border-radius: 8px"
+            />
+          </p>
+          <p class="message-display">
+            <i class="fa-solid fa-angle-right"></i> 
+            3 - E por fim clique em "Adicionar nova imagem", e carregar a imagem de sua escolha<br />
+            <img
+              src="../src/imgTuto/addBanner/03.png"
+              alt=""
+              style="margin-top: 12px; margin-left: 12px; border-radius: 8px"
+            /><br /><br />
+          </p>
+
+          <h2>2 - Passo no site</h2>
+          <!-- <input type="text" value="?cache=clear" readonly> -->
+          <p class="message-display">
+            <i class="fa-solid fa-angle-right"></i>
+            4 - E ele será aplicada automaticamente no site<br />
+            <img
+              src="../src/imgTuto/addBanner/04.png"
+              alt=""
+              style="margin-top: 12px; margin-left: 12px; border-radius: 8px"
+            /><br /><br />
+          </p>
+        </div>
+      </main>
+    </div>
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+
+    <script>
+      $(document).ready(function () {
+        $(".menu-button").on("click", function () {
+          $(".menu-button").removeClass("active");
+
+          $(this).addClass("active");
+
+          $(".code-content").removeClass("active");
+
+          var targetContent = $(this).data("target");
+
+          $(targetContent).addClass("active");
+        });
+      });
+    </script>
+  </body>
+</html>

@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css" integrity="sha512-2SwdPD6INVrV/lHTZbO2nodKhrnDdJK9/kg2XD1r9uGqPo1cUbujc+IYdlYdEErWNu69gVcYgdxlmVmzTWnetw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+  <link rel="stylesheet" href="/styles/global.css">
+  <link rel="stylesheet" href="/styles/mensa.css">
+  <title>Comandos</title>
+</head>
+<body>
+<div class="container">
+        <aside class="sidebar">
+            <div class="sidebar-header">
+                <h1>Comandos</h1>
+                <p>Códigos</p>
+                <hr>
+            </div>
+            <nav class="menu">
+                <button class="menu-button active" data-target="#content-cache">Cache <i class="fa-solid fa-angle-right"></i></button>
+                <button class="menu-button" data-target="#content-codigos">Códigos <i class="fa-solid fa-angle-right"></i></button>
+            </nav>
+            <div class="home">
+              <hr>
+              <a class="voltar" href="../index.html"><i class="fa-solid fa-chevron-left"></i> Voltar</i></a>
+            </div>
+        </aside>
+        <main class="main-content">
+            <div id="content-cache" class="code-content active">
+              <h2>Cache</h2>
+                <!-- <input type="text" value="?cache=clear" readonly> -->
+                  <p class="message-display">
+                    <span class="tagName">Limpar cache</span><br>
+                    ?cache=clear
+                  </p>
+            </div>
+
+            <div id="content-codigos" class="code-content">
+              <h2>Códigos</h2>
+                <!-- <input type="text" value="?cache=clear" readonly> -->
+                  <p class="message-display">
+                    <span class="tagName">Alterar link do Whatsapp</span><br>
+                    $(".btnZap > span").attr("onclick","window.open('https://api.whatsapp.com/send?phone=551199999999'), _blank");
+                  </p>
+                  <p class="message-display">
+                    <span class="tagName">Adicionar elemento no head</span><br>
+                    $("head").prepend(`<br><br>`);
+                  </p>
+                  <p class="message-display">
+                    <span class="tagName">Adicionar elemento no body</span><br>
+                    $("body").prepend(`<br><br>`);
+                  </p>
+
+            </div>
+        </main>
+    </div>
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+
+    <script>
+      $(document).ready(function(){
+    $('.menu-button').on('click', function(){
+        $('.menu-button').removeClass('active');
+
+        $(this).addClass('active');
+        
+        $('.code-content').removeClass('active');
+        
+        var targetContent = $(this).data('target');
+
+        $(targetContent).addClass('active');
+    });
+});
+    </script>
+</body>
+</html>
