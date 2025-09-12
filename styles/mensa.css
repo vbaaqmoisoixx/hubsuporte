@@ -37,6 +37,7 @@ body {
     border-bottom-right-radius: 20px;
     display: flex;
     flex-direction: column;
+    transition: transform 0.3s ease;
 }
 
 .main-content {
@@ -161,4 +162,45 @@ body {
     border-radius: 8px;
     margin-bottom: 21px;
     opacity: 0.7;
+}
+
+/* ---- BOTÃO HAMBÚRGUER E RESPONSIVIDADE ---- */
+.hamburger-menu {
+    display: none;
+}
+
+.main-header {
+    display: flex;
+    align-items: center;
+    justify-content: end;
+    z-index: 1001; 
+    padding: 10px 20px;
+}
+
+/* --- Media query para telas menores --- */
+@media (max-width: 768px) {
+    .sidebar {
+        transform: translateX(-108%); 
+        position: fixed;
+        top: 0;
+        left: 0;
+        height: 100%; 
+        z-index: 1000; 
+        background-color: var(--background-color);
+        box-shadow: #30e0a52d 0px 0px 8px;
+    }
+
+    .sidebar.open {
+        transform: translateX(0);
+    }
+
+    .hamburger-menu {
+        display: block;
+        border: none;
+        cursor: pointer;
+        color: var(--accent-color);
+        background-color: var(--border-color);
+        padding: 10px 15px;
+        border-radius: 8px;
+    }
 }
