@@ -129,4 +129,103 @@ main {
 
     .btn:hover {
       background: var(--cor-segundaria);
+
     }
+
+/* Responsividade */
+
+/* Tablets */
+@media (max-width: 1024px) {
+  .imgindex {
+      display: none;
+  }
+
+  .carouselContainer {
+    width: 700px;
+  }
+
+  .carouselSlide {
+    width: 700px;
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: auto;
+    gap: 15px;
+  }
+
+  .card {
+    width: 328px;
+    height: 200px;
+  }
+
+  .card h3 {
+    font-size: 2rem;
+  }
+
+  .card p {
+    font-size: 14px;
+  }
+}
+
+/* Celulares grandes */
+@media (max-width: 768px) {
+  main {
+    flex-direction: column;
+    padding: 1rem;
+  }
+
+  .imgindex {
+      display: none;
+  }
+
+  .carouselContainer {
+    width: 100%;
+    align-items: center;
+  }
+
+  .carouselSlide {
+    width: 100%;
+    grid-template-columns: 1fr;
+    gap: 15px;
+    padding: 10px;
+  }
+
+  .card {
+    width: 328px;
+    height: auto;
+    padding: 15px;
+  }
+
+  .card h3 {
+    font-size: 1.8rem;
+  }
+
+  .card p {
+    font-size: 14px;
+  }
+}
+
+/* Celulares pequenos */
+@media (max-width: 480px) {
+  .imgindex {
+      display: none;
+  }
+
+  .card {
+    width: 328px;
+    padding: 12px;
+  }
+
+  .card h3 {
+    font-size: 1.5rem;
+  }
+
+  .card p {
+    font-size: 13px;
+  }
+
+  .btn {
+    width: 40px;
+    height: 40px;
+  }
+}
+
+

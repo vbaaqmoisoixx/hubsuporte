@@ -10,6 +10,11 @@
   <title>Tutoriais</title>
 </head>
 <body>
+  <header class="main-header" id="main-header" >
+    <button class="hamburger-menu">
+        <i class="fa-solid fa-bars" ></i>
+    </button>
+    </header>
 <div class="container">
         <aside class="sidebar">
             <div class="sidebar-header">
@@ -69,6 +74,20 @@
         $(targetContent).addClass('active');
     });
 });
+
+// Espera o DOM carregar
+document.addEventListener('DOMContentLoaded', () => {
+    const hamburgerBtn = document.querySelector('.hamburger-menu');
+    const sidebar = document.querySelector('.sidebar');
+
+    if (hamburgerBtn && sidebar) {
+        // Adiciona um evento de clique ao botão
+        hamburgerBtn.addEventListener('click', () => {
+            // Alterna a classe 'open' na barra lateral
+            sidebar.classList.toggle('open');
+        });
+    }
+})
     </script>
 </body>
 </html>

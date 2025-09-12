@@ -42,7 +42,7 @@ body {
 
 .main-content {
     flex-grow: 1; 
-    padding: 40px;
+    padding: 20px 20px 90px 20px;
     overflow-y: auto;
     height: 100vh;
 }
@@ -173,12 +173,11 @@ body {
     display: flex;
     align-items: center;
     justify-content: end;
-    z-index: 1001; 
-    padding: 10px 20px;
 }
 
 /* --- Media query para telas menores --- */
 @media (max-width: 768px) {
+
     .sidebar {
         transform: translateX(-108%); 
         position: fixed;
@@ -203,4 +202,16 @@ body {
         padding: 10px 15px;
         border-radius: 8px;
     }
+
+    .main-header {
+    z-index: 1001; 
+    padding: 10px 20px;
 }
+    .imgTuto {
+    width: 100%;
+    height: auto;
+}
+}
+
+
+
